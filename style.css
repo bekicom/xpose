@@ -173,6 +173,7 @@ nav {
     cursor: ew-resize;
 }
 
+
 .feature-card h3 {
     padding: 0.75rem;
     margin: 0;
@@ -232,21 +233,22 @@ footer {
 }
 
 .mobile-menu {
-    display: none;
+    display: none; /* Avval yashirilgan */
+
     position: fixed;
-    height: 200px;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: white;
-    padding: 4rem 1rem;
+    /* padding: 4rem 1rem; */
     z-index: 1;
-    text-align: center;color: black;
+    color: black;
+    height: 200px;
+    background: white;
+  
 }
 .mobile-menu > a{
     color: black;
-    text-align: center;
 }
 .text{
    display: flex;
@@ -259,7 +261,13 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 1.5rem;
+    padding-top: 70px;
+}
+
+.mobile-menu > button{
+    margin: 0;
 }
 
 /* Media Queries */
@@ -420,29 +428,42 @@ footer {
 
 
 /* type write css */
-.typewriter {
-    display: inline-block;
-    border-right: 2px solid black;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    animation: typing 2.5s steps(20, end), blink 0.5s step-end infinite alternate;
+.hero {
+  text-align: center;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
 }
 
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
+.hero h1 {
+  font-size: 2.5rem;
+  line-height: 1.4;
+  color: #333;
 }
 
-@keyframes blink {
-    from {
-        border-color: transparent;
-    }
-    to {
-        border-color: black;
-    }
+.creative {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #E82255;
+  color: #E82255;
+  animation: blinkCursor 0.5s step-end infinite alternate;
+  font-weight: bold;
+}
+
+/* Курсорнинг ёқилиб-ўчиши */
+@keyframes blinkCursor {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: #E82255;
+  }
+}
+
+/* Қўшилган стильлар */
+.hero p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
 }

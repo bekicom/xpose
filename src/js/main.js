@@ -9,23 +9,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // type write js
-const texts = ["creative", "innovative", "amazing", "dynamic"]; // Matnlar
-let index = 0; // Boshlang'ich matn ko'rsatkich
+const words = ["creative", "innovative", "dynamic", "intelligent"]; // Сўзлар рўйхати
+let wordIndex = 0;
+let charIndex = 0;
+const delay = 200; // Ҳар бир ҳарф учун кечиктириш
+const delayBetweenWords = 2000; // Сўзлар орасидаги вақт
 
-function typeEffect() {
-  const typewriterElement = document.querySelector(".typewriter"); // Typewriter elementi
-  typewriterElement.textContent = ""; // Eski matnni o'chirish
-  void typewriterElement.offsetWidth; // Repaint uchun o'lchamni qayta yuklash
-  typewriterElement.textContent = texts[index]; // Yangi matnni qo'shish
+const typewriterElement = document.querySelector(".creative");
 
-  // CSS animatsiyani qayta qo'llash
-  typewriterElement.style.animation = "none";
-  void typewriterElement.offsetWidth; // Animatsiyani qayta yuklash
-  typewriterElement.style.animation =
-    "typing 2.5s steps(20, end), blink 0.5s step-end infinite alternate";
-
-  index = (index + 1) % texts.length; // Keyingi matnga o'tish
+function typeWord() {
+  // Ҳозирги сўздан ҳарфлар киритилади
+  if (charIndex < words[wordIndex].length) {
+    typewriterElement.textContent += words[wordIndex][charIndex];
+    charIndex++;
+    setTimeout(typeWord, delay);
+  } else {
+    // Сўз ёзиб бўлингач, кейинги сўзга ўтиш
+    setTimeout(deleteWord, delayBetweenWords);
+  }
 }
 
-// Har 3 soniyada yangi matnni ko'rsatish
-setInterval(typeEffect, 3000);
+function deleteWord() {
+  // Ҳар бир ҳарфни ўчириш
+  if (charIndex > 0) {
+    typewriterElement.textContent = words[wordIndex].slice(0, charIndex - 1);
+    charIndex--;
+    setTimeout(deleteWord, delay);
+  } else {
+    // Кейинги сўзга ўтиш
+    wordIndex = (wordIndex + 1) % words.length;
+    setTimeout(typeWord, delay);
+  }
+}
+
+// Анимацияни бошлаш
+typeWord();
+
