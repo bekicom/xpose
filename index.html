@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Image Tools</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">XPose</div>
+        <div class="nav-links">
+          <a href="#products">Products</a>
+          <a href="#pricing">Pricing</a>
+          <button class="cta-button">GO TO APP</button>
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+      <d class="mobile-menu">
+        <a href="#produ">Products</a>
+        <a href="#pri">Pricing</a>
+        <button class="cta-button">GO TO APP</button>
+      </d>
+    </header>
+
+    <main>
+       <section class="hero">
+        <h1>Powered by AI<br>
+            <span class="creative typewriter"></span><br>
+            visual design platform
+        </h1>
+        <p>We use artificial intelligence and computer vision capabilities to create a wide range of products for both individual use and business applications & workflows to achieve efficiency and creativity.</p>
+    </section>
+
+      <section class="features">
+        <h2>Learn more about artificial intelligence</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-image" id="enhancer">
+              <img-comparison-slider class="card">
+                <img slot="first" src="./static/card1_2.jpg" />
+                <img slot="second" src="./static/card1.jpg" />
+              </img-comparison-slider>
+            </div>
+         <div class="text">
+               <h3>Photo Enhancer</h3>
+            <p>
+              Automatically enhance resolution, clarity and detail in your
+              photos
+            </p>
+         </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-image" id="video-enhancer">
+              <video src="./static/card2.mp4" autoplay muted />
+            </div>
+        <div class="text">
+                <h3>AI Video Enhancer</h3>
+            <p>Optimize and upscale your videos with advanced AI processing</p>
+        </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-image" id="anime">
+               <video src="./static/card3.mp4" autoplay muted />
+            </div>
+            <div class="text">
+                <h3>Photo Anime</h3>
+            <p>Transform your photos into anime-style artwork</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-image" id="colorizer">
+              <img-comparison-slider class="card">
+        <img slot="first" src="./static/card4_2.jpg" />
+        <img slot="second" src="./static/card4.jpg" />
+      </img-comparison-slider>
+            </div>
+           <div class="text">
+             <h3>Photo Colorizer</h3>
+            <p>Convert black and white photos to vibrant color</p>
+           </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-image" id="selfie">
+               <img-comparison-slider class="card">
+        <img slot="first" src="./static/card5_2.jpg" />
+        <img slot="second" src="./static/card5.jpg" />
+      </img-comparison-slider>
+            </div>
+            <div class="text">
+                <h3>Multi-person Selfie</h3>
+            <p>Create perfect group photos with AI enhancement</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-image" id="passport">
+                   <img-comparison-slider class="card">
+        <img slot="first" src="./static/card6_2.jpg" />
+        <img slot="second" src="./static/card6.jpg" />
+      </img-comparison-slider>
+            </div>
+        <div class="text">
+                <h3>Passport Photo Creator</h3>
+            <p>Generate professional passport photos instantly</p>
+        </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="legal-info">
+          <p>ИП: Лысюк Анастасия Алексеевна</p>
+          <p>ИНН: 665802252220</p>
+          <p>ОГРНИП: 322665800053551</p>
+          <p>TELEGRAM: поддержка чат</p>
+        </div>
+        <div class="footer-links">
+          <a href="#">Оферта</a>
+          <a href="#">Условия предоставления услуг</a>
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Правила оплаты</a>
+          <a href="#">Вернуть средства</a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"
+    ></script>
+  </body>
+</html>
